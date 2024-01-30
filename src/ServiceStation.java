@@ -1,31 +1,23 @@
 public class ServiceStation implements Check {
-    public void check(Car car) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.getModelName());
-            for (int i = 0; i < car.getCountWheels(); i++) {
-                car.updateTyre();
+    @Override
+    public void check(WheelsTransport wheelsTransport) {
+        if (wheelsTransport != null) {
+            System.out.println("Обслуживаем " + wheelsTransport.getModelName());
+            for (int i = 0; i < wheelsTransport.getCountWheels(); i++) {
+                wheelsTransport.updateTyre();
             }
-            car.checkEngine();
         }
     }
 
-    public void check(Truck truck) {
-        if (truck != null) {
-            System.out.println("Обслуживаем " + truck.getModelName());
-            for (int i = 0; i < truck.getCountWheels(); i++) {
-                truck.updateTyre();
+    @Override
+    public void check(MotorTransport motorTransport) {
+        if (motorTransport != null) {
+            System.out.println("Обслуживаем " + motorTransport.getModelName());
+            for (int i = 0; i < motorTransport.getCountWheels(); i++) {
+                motorTransport.updateTyre();
             }
-            truck.checkEngine();
-            truck.checkTrailer();
-        }
-    }
-
-    public void check(Bicycle bicycle) {
-        if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.getModelName());
-            for (int i = 0; i < bicycle.getCountWheels(); i++) {
-                bicycle.updateTyre();
-            }
+            motorTransport.checkEngine();
+            motorTransport.checkTrailer();
         }
     }
 }

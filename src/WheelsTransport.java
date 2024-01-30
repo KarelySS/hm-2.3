@@ -1,8 +1,8 @@
-public class Transport {
-private String modelName;
-private int countWheels;
+public abstract class WheelsTransport implements UpdateTyre{
+    private String modelName;
+    private int countWheels;
 
-    public Transport(String modelName, int countWheels) {
+    public WheelsTransport(String modelName, int countWheels) {
         this.modelName = modelName;
         this.countWheels = countWheels;
     }

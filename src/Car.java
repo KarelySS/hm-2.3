@@ -1,14 +1,24 @@
-public class Car extends Transport implements UpdateTyre, CheckEngine {
+public class Car extends MotorTransport {
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+
+    public Car(String modelName, int countWheels) {
+        super(modelName, countWheels);
     }
 
+    @Override
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 
-    public Car(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    @Override
+    public void checkTrailer() {
+        System.out.println("Прицеп отсутствует");
     }
 }
+
+

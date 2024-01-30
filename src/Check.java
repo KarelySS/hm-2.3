@@ -1,5 +1,5 @@
 public interface Check {
-public void check (Bicycle bicycle);
-public void check (Car car);
-public void check (Truck truck);
+public void check (MotorTransport motorTransport);
+    public void check (WheelsTransport wheelsTransport);
+
 }
