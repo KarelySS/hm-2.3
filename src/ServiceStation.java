@@ -1,6 +1,10 @@
-public class ServiceStation implements Check {
-    @Override
-    public void check(WheelsTransport wheelsTransport) {
+public class ServiceStation {
+    private void check(Transport transport) {
+
+    }
+
+    public void check(WheeledTransport wheelsTransport) {
+        wheelsTransport.service();
         if (wheelsTransport != null) {
             System.out.println("Обслуживаем " + wheelsTransport.getModelName());
             for (int i = 0; i < wheelsTransport.getCountWheels(); i++) {
@@ -9,8 +13,8 @@ public class ServiceStation implements Check {
         }
     }
 
-    @Override
     public void check(MotorTransport motorTransport) {
+        motorTransport.service();
         if (motorTransport != null) {
             System.out.println("Обслуживаем " + motorTransport.getModelName());
             for (int i = 0; i < motorTransport.getCountWheels(); i++) {

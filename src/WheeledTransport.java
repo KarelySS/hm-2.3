@@ -1,8 +1,15 @@
-public abstract class WheelsTransport implements UpdateTyre{
+public abstract class WheeledTransport implements Transport{
     private String modelName;
     private int countWheels;
+    public void service(){
+        System.out.println("Техника в сервисе");
+    }
 
-    public WheelsTransport(String modelName, int countWheels) {
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public WheeledTransport(String modelName, int countWheels) {
         this.modelName = modelName;
         this.countWheels = countWheels;
     }

@@ -3,10 +3,10 @@ public class Main {
         MotorTransport car = new Car("car1", 4);
         MotorTransport car2 = new Car("car2", 4);
 
-        Truck truck = new Truck("truck1", 6);
-        Truck truck2 = new Truck("truck2", 8);
-        WheelsTransport bicycle = new Bicycle("bicycle1", 2);
-        WheelsTransport bicycle2 = new Bicycle("bicycle2", 2);
+        MotorTransport truck = new Truck("truck1", 6);
+        MotorTransport truck2 = new Truck("truck2", 8);
+        WheeledTransport bicycle = new Bicycle("bicycle1", 2);
+        WheeledTransport bicycle2 = new Bicycle("bicycle2", 2);
         ServiceStation station = new ServiceStation();
         station.check(car);
         station.check(car2);
