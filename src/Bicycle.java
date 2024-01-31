@@ -1,9 +1,6 @@
-public class Bicycle extends Transport implements UpdateTyre {
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+public class Bicycle extends WheeledTransport {
 
-    public Bicycle(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
+    public Bicycle(String modelName, int countWheels) {
+        super(modelName, countWheels);
     }
 }
